@@ -22,6 +22,6 @@ from cars import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/cars$', views.cars_list),
-    re_path(r'^api/cars/([0-9])$', views.cars_detail),
+    path('api/cars/<int:id>', views.cars_detail),
 ]
     
